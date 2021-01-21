@@ -1,0 +1,20 @@
+---
+- hosts: all
+  gather_facts: false
+
+  vars_prompt:
+    - name: user
+      prompt: "Enter Windows Username"
+    - name: password
+      prompt: "Enter Windows Password"
+
+  vars:
+    ansible_user: "{{ user }}"
+    ansible_password: "{{ password }}"
+    ansible_winrm_server_cert_validation: ignore
+    ansible_winrm_transport: ntlm    
+    ansible_connection: winrm
+
+  tasks:
+  - name: run win ping
+    win_ping:
