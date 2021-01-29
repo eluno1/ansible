@@ -1,16 +1,8 @@
 ---
-- hosts: all
-
-  vars_prompt:
-          - name: user
-            prompt: "Enter ssh user"
-            private: no
-          - name: password
-            prompt: "Enter password for ssh user"
+- hosts: linux 
+  gather_facts: false
 
   vars:
-          ansible_user: "{{ user }}"
-          ansible_password: "{{ password }}"
           ansible_ssh_common_args: '-o StrictHostKeyChecking=no'
 
   tasks:
