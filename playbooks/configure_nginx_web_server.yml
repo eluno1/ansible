@@ -16,7 +16,7 @@
             copy:
                     src: index.html
                     dest: /usr/share/nginx/html/index.html
-            become: yes
+            become: yes # noqa 208
           - name: start nginx service
             service:
                     name: nginx
