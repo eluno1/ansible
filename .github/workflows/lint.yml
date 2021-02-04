@@ -15,3 +15,6 @@ jobs:
       uses: ansible/ansible-lint-action@master
       with:
         targets: ""
+        override-deps: |
+          ansible==2.9.12
+          ansible-lint=4.3.7
