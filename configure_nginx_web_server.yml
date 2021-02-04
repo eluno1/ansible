@@ -11,7 +11,7 @@
                     name:
                             - nginx
                     state: latest
-            become: yes
+            become: yes # noqa 403
           - name: copy index.html
             copy:
                     src: index.html

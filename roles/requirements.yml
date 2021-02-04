@@ -1,0 +1,4 @@
+- src: https://github.com/eluno1/chocolatey.git
+  scm: git
+  version: "1.0"
+  name: chocolatey
