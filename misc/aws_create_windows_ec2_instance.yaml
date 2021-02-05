@@ -94,6 +94,8 @@
           app: ansible
           env: dev
           os: windows
+          applicationRole: webserver
+          cluster: windows
       register: ec2
 
     - name: associate new elastic IPs with each of the instances

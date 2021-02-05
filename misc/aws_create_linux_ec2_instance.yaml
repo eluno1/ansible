@@ -84,6 +84,8 @@
           app: ansible
           env: dev
           os: linux
+          applicationRole: webserver
+          cluster: linux
       register: ec2
 
     - name: associate new elastic IPs with each of the instances

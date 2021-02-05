@@ -1,5 +1,5 @@
 - name: '[Linux] configure nginx'
-  import_playbook: configure_nginx_web_server.yml
+  import_playbook: playbooks/configure_nginx_web_server.yml
 
 - hosts: windows
   gather_facts: false
@@ -7,4 +7,4 @@
     - chocolatey
 
 - name: '[Windows] configure IIS'
-  import_playbook: config_iis_web_server.yml
+  import_playbook: playbooks/config_iis_web_server.yml
