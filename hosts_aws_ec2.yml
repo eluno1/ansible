@@ -3,8 +3,6 @@ regions:
   - us-east-1
 filters:
   tag:app: ansible
-hostnames:
-  - tag:Name
 keyed_groups:
   - key: tags.os
     separator: ""
